@@ -19,7 +19,7 @@ class UserController extends Controller {
     public function update(Request $request) {
         if (Helper::isJson($request->getContent())) {
             $requestData = json_decode($request->getContent(), 1);
-            print_r($requestData);
+            //print_r($requestData);
         } else {
             return response()->json('Invalid POST JSON', 422);
         }
